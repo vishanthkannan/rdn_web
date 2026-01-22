@@ -111,14 +111,14 @@ const Home = () => {
                                 { name: "Radisson Hotel", logo: "/clients/radisson.png" },
                                 { name: "Suzuki", logo: "/clients/suzuki.png" },
                                 { name: "Tanishq (Tata)", logo: "/clients/tanishq.png" },
-                                // Set 2
+                                // Set 2    
                                 { name: "Eicher", logo: "/clients/eicher.png" },
                                 { name: "Maruti Suzuki", logo: "/clients/maruti.png" },
                                 { name: "JSW Steels", logo: "/clients/jsw.png" },
                                 { name: "Radisson Hotel", logo: "/clients/radisson.png" },
                                 { name: "Suzuki", logo: "/clients/suzuki.png" },
                                 { name: "Tanishq (Tata)", logo: "/clients/tanishq.png" },
-                                // Set 3
+                                // Set 3xl
                                 { name: "Eicher", logo: "/clients/eicher.png" },
                                 { name: "Maruti Suzuki", logo: "/clients/maruti.png" },
                                 { name: "JSW Steels", logo: "/clients/jsw.png" },
