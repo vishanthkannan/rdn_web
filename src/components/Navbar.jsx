@@ -33,7 +33,7 @@ const Navbar = () => {
                             <Link
                                 key={link.name}
                                 to={link.path}
-                                className={`relative py-1 group transition-colors duration-300 font-medium text-lg tracking-wide ${location.pathname === link.path ? 'text-accent' : 'text-slate-700 hover:text-accent'
+                                className={`relative py-1 group transition-colors duration-300 font-bold text-lg tracking-wide ${location.pathname === link.path ? 'text-accent' : 'text-slate-700 hover:text-accent'
                                     }`}
                             >
                                 {link.name}
@@ -64,7 +64,7 @@ const Navbar = () => {
                                 key={link.name}
                                 to={link.path}
                                 onClick={() => setIsOpen(false)}
-                                className={`block px-3 py-3 rounded-md text-base font-medium hover:text-accent hover:bg-slate-50 transition-colors ${location.pathname === link.path ? 'text-accent bg-slate-50' : 'text-slate-700'
+                                className={`block px-3 py-3 rounded-md text-base font-bold hover:text-accent hover:bg-slate-50 transition-colors ${location.pathname === link.path ? 'text-accent bg-slate-50' : 'text-slate-700'
                                     }`}
                             >
                                 {link.name}

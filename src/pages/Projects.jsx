@@ -1,6 +1,6 @@
 const Projects = () => {
     const projects = [
-        { id: 1, title: "Modern Residential Villa", category: "Residential", image: "https://images.unsplash.com/photo-1600596542815-e328701102b9?q=80&w=2074&auto=format&fit=crop" },
+        { id: 1, title: "Modern Residential Villa", category: "Residential", image: "https://decorcharm.com/wp-content/uploads/2024/06/1718181515_806_Stunning-white-regency-villa-nestled-in-the-Hollywood-Hills.jpg" },
         { id: 2, title: "Corporate Office Complex", category: "Commercial", image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" },
         { id: 3, title: "Luxury Apartment Interior", category: "Interior", image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop" },
         { id: 4, title: "Industrial Warehouse", category: "Industrial", image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070&auto=format&fit=crop" },
