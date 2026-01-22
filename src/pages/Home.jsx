@@ -6,8 +6,8 @@ const Home = () => {
     const [currentSlide, setCurrentSlide] = React.useState(0);
 
     const slides = [
-        "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop", // Building construction
-        "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop", // Excavator
+        "https://www.uwplatt.edu/news/sites/default/files/2023-02/Construction%20Lab2.jpg", // Building construction
+        "https://www.bilbrey-construction.com/wp-content/uploads/2021/08/2390330-scaled.jpg", // Excavator
         "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=2070&auto=format&fit=crop"  // Blueprint/Plan
     ];
 
@@ -21,7 +21,7 @@ const Home = () => {
     return (
         <div className="flex flex-col">
             {/* Hero Section */}
-            <section className="relative h-[600px] flex items-center bg-slate-900 text-white overflow-hidden">
+            <section className="relative h-[calc(100vh-80px)] min-h-[600px] flex items-center bg-slate-900 text-white overflow-hidden">
                 {/* Slideshow Background */}
                 {slides.map((slide, index) => (
                     <div
@@ -30,34 +30,34 @@ const Home = () => {
                             }`}
                         style={{ backgroundImage: `url('${slide}')` }}
                     >
-                        <div className="absolute inset-0 bg-black opacity-50"></div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-slate-900/30"></div>
                     </div>
                 ))}
 
                 <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left">
-                    <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                    <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-6 leading-tight opacity-0 animate-fade-in-up">
                         Creating the Wonders<br />
                         <span className="text-accent">for the Future</span>
                     </h1>
-                    <p className="text-xl text-slate-200 mb-8 max-w-2xl">
+                    <p className="text-xl md:text-2xl text-slate-200 mb-10 max-w-2xl opacity-0 animate-fade-in-up animation-delay-200 font-light">
                         Specializing in Turnkey Construction Projects since 2016. We bring your vision to life with precision, quality, and trust.
                     </p>
-                    <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                        <Link to="/contact" className="bg-accent hover:bg-accent-hover text-white px-8 py-3 rounded-md font-bold text-lg transition-colors inline-block text-center">
+                    <div className="flex flex-col sm:flex-row gap-4 mb-12 opacity-0 animate-fade-in-up animation-delay-400">
+                        <Link to="/contact" className="bg-accent hover:bg-accent-hover text-white px-10 py-4 rounded-full font-bold text-lg transition-all shadow-lg hover:shadow-accent/40 hover:-translate-y-1 text-center">
                             Get a Quote
                         </Link>
-                        <Link to="/projects" className="bg-transparent border-2 border-white hover:bg-white hover:text-primary text-white px-8 py-3 rounded-md font-bold text-lg transition-colors inline-block text-center">
+                        <Link to="/projects" className="bg-white/10 backdrop-blur-md border border-white/30 hover:bg-white hover:text-primary text-white px-10 py-4 rounded-full font-bold text-lg transition-all hover:-translate-y-1 text-center">
                             View Projects
                         </Link>
                     </div>
 
                     {/* Slide Indicators */}
-                    <div className="flex space-x-2 justify-center sm:justify-start">
+                    <div className="flex space-x-3 justify-center sm:justify-start opacity-0 animate-fade-in-up animation-delay-400">
                         {slides.map((_, index) => (
                             <button
                                 key={index}
                                 onClick={() => setCurrentSlide(index)}
-                                className={`w-3 h-3 rounded-full transition-colors ${index === currentSlide ? 'bg-accent' : 'bg-white/50 hover:bg-white'}`}
+                                className={`h-1.5 rounded-full transition-all duration-300 ${index === currentSlide ? 'bg-accent w-8' : 'bg-white/40 w-4 hover:bg-white hover:w-6'}`}
                                 aria-label={`Go to slide ${index + 1}`}
                             />
                         ))}
@@ -66,24 +66,25 @@ const Home = () => {
             </section>
 
             {/* Stats Section */}
-            <section className="py-12 bg-accent text-white">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                        <div>
-                            <div className="text-4xl md:text-5xl font-bold mb-2">200+</div>
-                            <div className="text-sm md:text-base font-medium opacity-90">Projects Completed</div>
+            <section className="py-16 bg-gradient-to-r from-slate-900 via-green-500 to-slate-900 animate-gradient-x text-white relative overflow-hidden">
+                <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white to-transparent"></div>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-white/10">
+                        <div className="group hover:-translate-y-1 transition-transform duration-300">
+                            <div className="text-4xl md:text-6xl font-bold mb-2 group-hover:scale-110 transition-transform duration-300 inline-block">200+</div>
+                            <div className="text-sm md:text-base font-medium opacity-90 uppercase tracking-wider">Projects Completed</div>
                         </div>
-                        <div>
-                            <div className="text-4xl md:text-5xl font-bold mb-2">10+</div>
-                            <div className="text-sm md:text-base font-medium opacity-90">Years Experience</div>
+                        <div className="group hover:-translate-y-1 transition-transform duration-300">
+                            <div className="text-4xl md:text-6xl font-bold mb-2 group-hover:scale-110 transition-transform duration-300 inline-block">10+</div>
+                            <div className="text-sm md:text-base font-medium opacity-90 uppercase tracking-wider">Years Experience</div>
                         </div>
-                        <div>
-                            <div className="text-4xl md:text-5xl font-bold mb-2">100+</div>
-                            <div className="text-sm md:text-base font-medium opacity-90">Expert Team Members</div>
+                        <div className="group hover:-translate-y-1 transition-transform duration-300">
+                            <div className="text-4xl md:text-6xl font-bold mb-2 group-hover:scale-110 transition-transform duration-300 inline-block">100+</div>
+                            <div className="text-sm md:text-base font-medium opacity-90 uppercase tracking-wider">Expert Team Members</div>
                         </div>
-                        <div>
-                            <div className="text-4xl md:text-5xl font-bold mb-2">98%</div>
-                            <div className="text-sm md:text-base font-medium opacity-90">Client Satisfaction</div>
+                        <div className="group hover:-translate-y-1 transition-transform duration-300">
+                            <div className="text-4xl md:text-6xl font-bold mb-2 group-hover:scale-110 transition-transform duration-300 inline-block">98%</div>
+                            <div className="text-sm md:text-base font-medium opacity-90 uppercase tracking-wider">Client Satisfaction</div>
                         </div>
                     </div>
                 </div>
@@ -92,7 +93,7 @@ const Home = () => {
             {/* Clients Section (Trust) */}
             <section className="py-20 bg-slate-50 overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-                    <h2 className="text-4xl font-bold text-center text-primary mb-2">Trusted By Industry Leaders</h2>
+                    <h2 className="text-4xl font-bold text-center text-primary mb-2">Our Clients</h2>
                     <div className="w-24 h-1 bg-accent mx-auto rounded-full"></div>
                 </div>
 
@@ -153,34 +154,29 @@ const Home = () => {
             </section>
 
             {/* Why Choose Us */}
-            <section className="py-16 bg-white">
+            <section className="py-24 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl font-bold text-primary mb-4">Why Choose RDN Creators</h2>
-                        <p className="text-slate-600 max-w-2xl mx-auto">We are committed to delivering excellence in every project. Here is what sets us apart.</p>
+                        <h2 className="text-4xl font-bold text-primary mb-4">Why Choose RDN Creators</h2>
+                        <p className="text-slate-600 max-w-2xl mx-auto text-lg">We are committed to delivering excellence in every project. Here is what sets us apart.</p>
+                        <div className="w-20 h-1 bg-accent mx-auto rounded-full mt-6"></div>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        <div className="p-6 bg-slate-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                            <Shield className="text-accent w-12 h-12 mb-4" />
-                            <h3 className="text-xl font-bold mb-2 text-primary">Reliable Quality</h3>
-                            <p className="text-slate-600">Top-tier materials and workmanship guaranteed.</p>
-                        </div>
-                        <div className="p-6 bg-slate-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                            <Clock className="text-accent w-12 h-12 mb-4" />
-                            <h3 className="text-xl font-bold mb-2 text-primary">On-Time Delivery</h3>
-                            <p className="text-slate-600">We respect deadlines and project timelines.</p>
-                        </div>
-                        <div className="p-6 bg-slate-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                            <Store className="text-accent w-12 h-12 mb-4" />
-                            <h3 className="text-xl font-bold mb-2 text-primary">Turnkey Solutions</h3>
-                            <p className="text-slate-600">End-to-end management from design to handover.</p>
-                        </div>
-                        <div className="p-6 bg-slate-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                            <Users className="text-accent w-12 h-12 mb-4" />
-                            <h3 className="text-xl font-bold mb-2 text-primary">Experienced Team</h3>
-                            <p className="text-slate-600">Skilled professionals with years of expertise.</p>
-                        </div>
+                        {[
+                            { icon: Shield, title: "Reliable Quality", desc: "Top-tier materials and workmanship guaranteed." },
+                            { icon: Clock, title: "On-Time Delivery", desc: "We respect deadlines and project timelines." },
+                            { icon: Store, title: "Turnkey Solutions", desc: "End-to-end management from design to handover." },
+                            { icon: Users, title: "Experienced Team", desc: "Skilled professionals with years of expertise." }
+                        ].map((item, index) => (
+                            <div key={index} className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-[0_20px_40px_rgba(22,163,74,0.15)] border border-slate-100 hover:border-accent/20 transition-all duration-300 hover:-translate-y-1 group relative overflow-hidden flex flex-col items-center text-center">
+                                <div className="w-16 h-16 bg-green-50 rounded-2xl flex items-center justify-center mb-6 text-accent group-hover:scale-110 transition-transform duration-300">
+                                    <item.icon size={32} />
+                                </div>
+                                <h3 className="text-xl font-bold mb-3 text-primary group-hover:text-accent transition-colors duration-300">{item.title}</h3>
+                                <p className="text-slate-600 leading-relaxed text-sm">{item.desc}</p>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>

@@ -14,7 +14,7 @@ const Footer = () => {
                             Creating the Wonders for the Future. We specialize in Turnkey Construction Projects, delivering excellence since 2016.
                         </p>
                         <div className="flex space-x-4">
-                            <a href="#" className="hover:text-accent transition-colors"><Instagram size={24} /></a>
+                            <a href="https://www.instagram.com/rdncreators/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors"><Instagram size={24} /></a>
                             <a href="#" className="hover:text-accent transition-colors"><Facebook size={24} /></a>
                         </div>
                     </div>
@@ -35,8 +35,8 @@ const Footer = () => {
                             <li className="flex items-center space-x-3">
                                 <Phone size={20} className="text-accent flex-shrink-0" />
                                 <div className="flex flex-col">
-                                    <a href="tel:9513333935" className="hover:text-white">9513333935</a>
-                                    <a href="tel:9513333852" className="hover:text-white">9513333852</a>
+                                    <a href="tel:9513333935" className="hover:text-white">+91 9513333935</a>
+                                    <a href="tel:9513333852" className="hover:text-white">+91 9513333852</a>
                                 </div>
                             </li>
                             <li className="flex items-center space-x-3">

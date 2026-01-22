@@ -33,7 +33,7 @@ const About = () => {
                                 <span className="text-sm text-slate-500">Founded</span>
                             </div>
                             <div className="text-center p-4 bg-slate-50 rounded-lg border border-slate-100">
-                                <span className="block text-3xl font-bold text-accent">50+</span>
+                                <span className="block text-3xl font-bold text-accent">200+</span>
                                 <span className="text-sm text-slate-500">Projects</span>
                             </div>
                         </div>
