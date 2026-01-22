@@ -66,41 +66,38 @@ const Home = () => {
             </section>
 
             {/* Stats Section */}
-            <section className="py-16 bg-gradient-to-r from-slate-900 via-green-500 to-slate-900 animate-gradient-x text-white relative overflow-hidden">
-                <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white to-transparent"></div>
+            <section className="py-16 bg-white text-green-900 relative overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-white/10">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                         <div className="group hover:-translate-y-1 transition-transform duration-300">
-                            <div className="text-4xl md:text-6xl font-bold mb-2 group-hover:scale-110 transition-transform duration-300 inline-block">200+</div>
-                            <div className="text-sm md:text-base font-medium opacity-90 uppercase tracking-wider">Projects Completed</div>
+                            <div className="text-4xl md:text-6xl font-bold mb-2 text-green-700 group-hover:scale-110 transition-transform duration-300 inline-block">200+</div>
+                            <div className="text-sm md:text-base font-bold opacity-90 uppercase tracking-wider">Projects Completed</div>
                         </div>
                         <div className="group hover:-translate-y-1 transition-transform duration-300">
-                            <div className="text-4xl md:text-6xl font-bold mb-2 group-hover:scale-110 transition-transform duration-300 inline-block">10+</div>
-                            <div className="text-sm md:text-base font-medium opacity-90 uppercase tracking-wider">Years Experience</div>
+                            <div className="text-4xl md:text-6xl font-bold mb-2 text-green-700 group-hover:scale-110 transition-transform duration-300 inline-block">10+</div>
+                            <div className="text-sm md:text-base font-bold opacity-90 uppercase tracking-wider">Years Experience</div>
                         </div>
                         <div className="group hover:-translate-y-1 transition-transform duration-300">
-                            <div className="text-4xl md:text-6xl font-bold mb-2 group-hover:scale-110 transition-transform duration-300 inline-block">100+</div>
-                            <div className="text-sm md:text-base font-medium opacity-90 uppercase tracking-wider">Expert Team Members</div>
+                            <div className="text-4xl md:text-6xl font-bold mb-2 text-green-700 group-hover:scale-110 transition-transform duration-300 inline-block">100+</div>
+                            <div className="text-sm md:text-base font-bold opacity-90 uppercase tracking-wider">Expert Team Members</div>
                         </div>
                         <div className="group hover:-translate-y-1 transition-transform duration-300">
-                            <div className="text-4xl md:text-6xl font-bold mb-2 group-hover:scale-110 transition-transform duration-300 inline-block">98%</div>
-                            <div className="text-sm md:text-base font-medium opacity-90 uppercase tracking-wider">Client Satisfaction</div>
+                            <div className="text-4xl md:text-6xl font-bold mb-2 text-green-700 group-hover:scale-110 transition-transform duration-300 inline-block">98%</div>
+                            <div className="text-sm md:text-base font-bold opacity-90 uppercase tracking-wider">Client Satisfaction</div>
                         </div>
                     </div>
                 </div>
             </section>
 
             {/* Clients Section (Trust) */}
-            <section className="py-20 bg-slate-50 overflow-hidden">
+            <section className="py-20 bg-gradient-to-r from-slate-900 via-green-500 to-slate-900 animate-gradient-x text-white overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-                    <h2 className="text-4xl font-bold text-center text-primary mb-2">Our Clients</h2>
-                    <div className="w-24 h-1 bg-accent mx-auto rounded-full"></div>
+                    <h2 className="text-4xl font-bold text-center text-white mb-2">Our Clients</h2>
+                    <div className="w-24 h-1 bg-white/30 mx-auto rounded-full"></div>
                 </div>
 
                 <div className="relative w-full">
-                    {/* Gradient Fade Edges */}
-                    <div className="absolute left-0 top-0 bottom-0 w-24 sm:w-32 bg-gradient-to-r from-slate-50 to-transparent z-10 pointer-events-none"></div>
-                    <div className="absolute right-0 top-0 bottom-0 w-24 sm:w-32 bg-gradient-to-l from-slate-50 to-transparent z-10 pointer-events-none"></div>
+                    {/* Gradient Fade Edges removed for animated background compatibility */}
 
                     <div className="flex w-full overflow-hidden pause-on-hover py-4">
                         <div className="flex animate-scroll whitespace-nowrap gap-8 px-4">
