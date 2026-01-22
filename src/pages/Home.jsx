@@ -8,8 +8,6 @@ const Home = () => {
     const slides = [
         "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop", // Building construction
         "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop", // Excavator
-        "https://images.unsplash.com/photo-1531834685032-c34bf0d84c71?q=80&w=1997&auto=format&fit=crop", // Modern building
-        "https://images.unsplash.com/photo-1590644365607-1c5a38d0747d?q=80&w=2070&auto=format&fit=crop", // Site work
         "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=2070&auto=format&fit=crop"  // Blueprint/Plan
     ];
 
@@ -38,7 +36,7 @@ const Home = () => {
 
                 <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left">
                     <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                        Building Strong Foundations <br />
+                        Creating the Wonders<br />
                         <span className="text-accent">for the Future</span>
                     </h1>
                     <p className="text-xl text-slate-200 mb-8 max-w-2xl">

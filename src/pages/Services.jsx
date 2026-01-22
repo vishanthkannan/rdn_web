@@ -46,12 +46,25 @@ const Services = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {services.map((service, index) => (
-                        <div key={index} className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 border-t-4 border-transparent hover:border-accent group">
-                            <div className="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mb-6 text-primary group-hover:bg-accent group-hover:text-white transition-colors duration-300">
-                                <service.icon size={32} />
+                        <div key={index} className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-[0_20px_40px_rgba(22,163,74,0.15)] border border-slate-100 hover:border-accent/20 transition-all duration-300 hover:-translate-y-1 group relative overflow-hidden flex flex-col items-start h-full">
+
+                            {/* Icon */}
+                            <div className="w-14 h-14 bg-green-50 rounded-xl flex items-center justify-center mb-6 text-accent group-hover:scale-110 transition-transform duration-300">
+                                <service.icon size={28} strokeWidth={2} />
                             </div>
-                            <h3 className="text-2xl font-bold mb-3 text-primary">{service.title}</h3>
-                            <p className="text-slate-600 leading-relaxed">{service.description}</p>
+
+                            {/* Content */}
+                            <h3 className="text-xl font-bold mb-3 text-primary group-hover:text-accent transition-colors duration-300">{service.title}</h3>
+                            <p className="text-slate-600 leading-relaxed text-sm mb-auto">{service.description}</p>
+
+                            {/* Interactive Arrow Link */}
+                            <div className="flex items-center text-sm font-semibold text-slate-400 group-hover:text-accent transition-colors mt-6">
+                                <span>Learn More</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2 transform group-hover:translate-x-1 transition-transform">
+                                    <path d="M5 12h14"></path>
+                                    <path d="m12 5 7 7-7 7"></path>
+                                </svg>
+                            </div>
                         </div>
                     ))}
                 </div>

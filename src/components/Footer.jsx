@@ -5,14 +5,13 @@ const Footer = () => {
         <footer className="bg-primary text-slate-300 py-12 border-t border-slate-800">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-
                     {/* Company Info */}
                     <div>
                         <div className="mb-4">
-                            <img src="/rdn-logo.png" alt="RDN Creators" className="h-14 w-auto object-contain" />
+                            <img src="/rdn-logo.png" alt="RDN Creators" className="h-14 w-auto object-contain brightness-0 invert opacity-90" />
                         </div>
                         <p className="mb-4 text-sm leading-relaxed">
-                            Building Strong Foundations for the Future. We specialize in Turnkey Construction Projects, delivering excellence since 2016.
+                            Creating the Wonders for the Future. We specialize in Turnkey Construction Projects, delivering excellence since 2016.
                         </p>
                         <div className="flex space-x-4">
                             <a href="#" className="hover:text-accent transition-colors"><Instagram size={24} /></a>
@@ -47,7 +46,7 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    {/* Quick Links (Optional or just decorative/mission) */}
+                    {/* Quick Links */}
                     <div>
                         <h3 className="text-xl font-bold text-white mb-4">Our Services</h3>
                         <ul className="space-y-2 text-sm">
