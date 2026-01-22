@@ -81,16 +81,16 @@ const Contact = () => {
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
                                     <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-1">Your Name</label>
-                                    <input type="text" id="name" required className="w-full px-4 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition-all" placeholder="John Doe" />
+                                    <input type="text" id="name" required className="w-full px-4 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition-all" placeholder="vishanth" />
                                 </div>
                                 <div>
                                     <label htmlFor="phone" className="block text-sm font-medium text-slate-700 mb-1">Phone Number</label>
-                                    <input type="tel" id="phone" required className="w-full px-4 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition-all" placeholder="+91 98765 43210" />
+                                    <input type="tel" id="phone" required className="w-full px-4 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition-all" placeholder="+91 1234567895" />
                                 </div>
                             </div>
                             <div>
                                 <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-1">Email Address</label>
-                                <input type="email" id="email" required className="w-full px-4 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition-all" placeholder="john@example.com" />
+                                <input type="email" id="email" required className="w-full px-4 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition-all" placeholder="vishanth@gmail.com" />
                             </div>
                             <div>
                                 <label htmlFor="subject" className="block text-sm font-medium text-slate-700 mb-1">Subject</label>
@@ -113,10 +113,18 @@ const Contact = () => {
                 </div>
 
                 {/* Map Placeholder */}
-                <div className="mt-12 bg-slate-200 w-full h-80 rounded-lg flex items-center justify-center">
-                    <p className="text-slate-500 flex items-center">
-                        <MapPin className="mr-2" /> Google Maps Embed Placeholder (Replace with actual Iframe)
-                    </p>
+                {/* Google Map */}
+                <div className="mt-16 rounded-xl overflow-hidden shadow-lg h-[450px] border border-slate-200">
+                    <iframe
+                        src="https://maps.google.com/maps?q=11.7639317,78.1065992&hl=en&z=17&output=embed"
+                        width="100%"
+                        height="100%"
+                        style={{ border: 0 }}
+                        allowFullScreen=""
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                        title="RDN Creators Location"
+                    ></iframe>
                 </div>
 
             </div>
