@@ -18,7 +18,7 @@ const Projects = () => {
         },
         {
             id: 2,
-            title: "Maruthi Suzuki",
+            title: "Maruti Suzuki",
             category: "Showroom & Service",
             location: "Sankarapuram",
             description: "An expansive automotive showroom combining luxury display areas with functional service bays.",
@@ -44,6 +44,49 @@ const Projects = () => {
         },
         {
             id: 4,
+            title: "Giri Appartment",
+            category: "Living Area",
+            location: "Kerala",
+            description: "Bespoke residential designs that blend comfort, elegance, and sustainable living.",
+            images: [
+                "/projects/giri.jpg",
+                "/projects/giri2.jpg",
+            ]
+        },
+        {
+            id: 5,
+            title: "Godrej",
+            category: "Living Area",
+            location: "Kerala",
+            description: "Bespoke residential designs that blend comfort, elegance, and sustainable living.",
+            images: [
+                "/projects/godrej.jpg",
+                "/projects/godrej1.jpg",
+                "/projects/godrej2.jpg",
+                "/projects/godrej3.jpg",
+                "/projects/godrej4.jpg",
+            ]
+        },
+        {
+            id: 6,
+            title: "Esaf furnitures",
+            category: "Furiture Works",
+            location: "Kerala",
+            description: "Bespoke residential designs that blend comfort, elegance, and sustainable Working.",
+            images: [
+                "/projects/Esaf-furnitures.jpg",
+                "/projects/Esaf-furnitures1.jpg",
+                "/projects/Esaf-furnitures2.jpg",
+                "/projects/Esaf-furnitures3.jpg",
+                "/projects/Esaf-furnitures4.jpg",
+                "/projects/Esaf-furnitures5.jpg",
+                "/projects/Esaf-furnitures6.jpg",
+                "/projects/Esaf-furnitures7.jpg",
+            ]
+        },
+
+        {
+            id: 7,
             title: "Luxury Residential Collection",
             category: "Premium Living",
             location: "Various Locations",
@@ -57,7 +100,7 @@ const Projects = () => {
             ]
         },
         {
-            id: 5,
+            id: 8,
             title: "Modern Interior Concepts",
             category: "Interior Design",
             location: "Chennai & Coimbatore",
@@ -69,15 +112,16 @@ const Projects = () => {
                 "/projects/3.jpg",
                 "/projects/4.jpg"
             ]
-        }
+        },
+
     ];
 
     return (
-        <div className="h-[calc(100vh-80px)] bg-black overflow-y-scroll snap-y snap-mandatory scroll-smooth">
+        <div className="bg-black flex flex-col">
             {projects.map((project, index) => (
                 <div
                     key={project.id}
-                    className="h-full w-full snap-start border-b-8 border-black box-border relative"
+                    className="min-h-screen w-full border-b-8 border-black box-border relative"
                 >
                     <ProjectSection project={project} isLast={index === projects.length - 1} />
                 </div>
@@ -99,7 +143,7 @@ const ProjectSection = ({ project, isLast }) => {
         if (isCardLayout || isMasonryLayout) return;
         const timer = setInterval(() => {
             setCurrentImageIndex((prev) => (prev + 1) % project.images.length);
-        }, 4000);
+        }, 2000);
 
         return () => clearInterval(timer);
     }, [project.images.length, isCardLayout, isMasonryLayout]);
@@ -107,7 +151,7 @@ const ProjectSection = ({ project, isLast }) => {
     // 1. Creative Card Layout (Accordion)
     if (isCardLayout) {
         return (
-            <div className="relative h-full w-full bg-slate-900 overflow-hidden flex flex-col md:flex-row">
+            <div className="relative h-screen w-full bg-slate-900 overflow-hidden flex flex-col md:flex-row">
                 <div className="md:absolute md:top-12 md:left-12 z-20 p-6 md:p-0 bg-slate-900 md:bg-transparent pointer-events-none">
                     <span className="inline-block px-3 py-1 bg-accent/90 text-white text-xs font-bold uppercase tracking-wider rounded-sm mb-2">
                         {project.category}
@@ -148,7 +192,7 @@ const ProjectSection = ({ project, isLast }) => {
     // 2. Modern Masonry/Grid Layout (For Interior)
     if (isMasonryLayout) {
         return (
-            <div className="relative h-full w-full bg-white flex flex-col md:flex-row overflow-hidden">
+            <div className="relative min-h-screen w-full bg-white flex flex-col md:flex-row overflow-hidden">
                 {/* Left: Content */}
                 <div className="w-full md:w-1/3 p-12 flex flex-col justify-center bg-slate-50 z-10 shadow-xl relative order-2 md:order-1">
                     <div className="animate-fade-in-up">
@@ -195,7 +239,7 @@ const ProjectSection = ({ project, isLast }) => {
 
     // 3. Default Fullscreen Slideshow Layout (Commercial/Standard)
     return (
-        <div className="relative h-full w-full overflow-hidden">
+        <div className="relative h-screen w-full overflow-hidden">
             {/* Background Slideshow */}
             {project.images.map((img, index) => (
                 <div
@@ -241,8 +285,8 @@ const ProjectSection = ({ project, isLast }) => {
                                     key={idx}
                                     onClick={() => setCurrentImageIndex(idx)}
                                     className={`h-1.5 rounded-full transition-all duration-300 ${idx === currentImageIndex
-                                            ? 'w-8 bg-accent'
-                                            : 'w-2 bg-white/30 hover:bg-white/50'
+                                        ? 'w-8 bg-accent'
+                                        : 'w-2 bg-white/30 hover:bg-white/50'
                                         }`}
                                     aria-label={`Go to slide ${idx + 1}`}
                                 />

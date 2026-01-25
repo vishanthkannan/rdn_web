@@ -28,40 +28,40 @@ const Services = () => {
             title: "Renovation & Remodeling",
             description: "Transforming existing spaces into modern, efficient, and beautiful environments. Whether it's a kitchen upgrade or a full structural renovation, we breathe new life into your property.",
             icon: Hammer,
-            image: "/projects/3.jpg"
+            image: "/projects/2.jpg"
         },
         {
             id: '05',
             title: "Interior Works",
             description: "Designing and crafting stunning interiors that blend aesthetics with functionality. Custom furniture, lighting, and spatial planning tailored to your lifestyle.",
             icon: Grid,
-            image: "/projects/house4.jpg"
+            image: "/projects/3.jpg"
         },
         {
             id: '06',
             title: "Project Management",
             description: "Professional supervision and management to ensure your project stays on time and within budget. We coordinate contractors, quality checks, and logistics so you don't have to.",
             icon: Ruler,
-            image: "/projects/house2.jpg"
+            image: "/projects/1234.jpg"
         }
     ];
 
     return (
-        <div className="min-h-screen bg-slate-50 py-20 px-4 sm:px-6 lg:px-8">
-            {/* Header Section */}
-            <div className="max-w-7xl mx-auto mb-20 text-center">
-                <span className="text-accent font-bold tracking-widest uppercase text-sm mb-2 block">What We Do</span>
-                <h1 className="text-4xl md:text-6xl font-bold text-slate-900 leading-tight mb-6">
-                    Building excellence <br />
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-slate-600">in every detail.</span>
-                </h1>
-                <p className="max-w-2xl mx-auto text-slate-600 text-lg leading-relaxed">
-                    We deliver comprehensive construction solutions tailored to meet your unique needs with precision and quality.
-                </p>
+        <div className="min-h-screen bg-slate-50">
+            {/* Hero Section */}
+            <div className="relative bg-slate-900 text-white py-24 overflow-hidden mb-20">
+                <div className="absolute inset-0 bg-[url('/projects/Maruthi Suzuki -Sankarapuram3.jpg')] bg-cover bg-center opacity-20" />
+                <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <span className="text-accent font-bold tracking-widest uppercase mb-4 block">What We Do</span>
+                    <h1 className="text-5xl md:text-7xl font-bold mb-6">Building Excellence In Every Detail</h1>
+                    <p className="text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
+                        We deliver comprehensive construction solutions tailored to meet your unique needs with precision and quality.
+                    </p>
+                </div>
             </div>
 
             {/* Services List */}
-            <div className="max-w-7xl mx-auto flex flex-col gap-12 sm:gap-20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-12 sm:gap-20 pb-20">
                 {services.map((service, index) => (
                     <div
                         key={service.id}

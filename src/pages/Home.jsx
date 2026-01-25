@@ -1,6 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Store, Users, Clock, Shield } from 'lucide-react';
+import About from './About';
+import Services from './Services';
+import Projects from './Projects';
+import Contact from './Contact';
 
 const Home = () => {
     const [currentSlide, setCurrentSlide] = React.useState(0);
@@ -14,7 +18,7 @@ const Home = () => {
     React.useEffect(() => {
         const timer = setInterval(() => {
             setCurrentSlide((prev) => (prev + 1) % slides.length);
-        }, 5000);
+        }, 2000);
         return () => clearInterval(timer);
     }, []);
 
@@ -108,6 +112,7 @@ const Home = () => {
                                 { name: "Radisson Hotel", logo: "/clients/radisson.png" },
                                 { name: "Suzuki", logo: "/clients/suzuki.png" },
                                 { name: "Tanishq (Tata)", logo: "/clients/tanishq.png" },
+                                { name: "Godrej", logo: "/clients/godrej.png" },
                                 // Set 2    
                                 { name: "Eicher", logo: "/clients/eicher.png" },
                                 { name: "Maruti Suzuki", logo: "/clients/maruti.png" },
@@ -115,6 +120,7 @@ const Home = () => {
                                 { name: "Radisson Hotel", logo: "/clients/radisson.png" },
                                 { name: "Suzuki", logo: "/clients/suzuki.png" },
                                 { name: "Tanishq (Tata)", logo: "/clients/tanishq.png" },
+                                { name: "Godrej", logo: "/clients/godrej.png" },
                                 // Set 3
                                 { name: "Eicher", logo: "/clients/eicher.png" },
                                 { name: "Maruti Suzuki", logo: "/clients/maruti.png" },
@@ -122,13 +128,15 @@ const Home = () => {
                                 { name: "Radisson Hotel", logo: "/clients/radisson.png" },
                                 { name: "Suzuki", logo: "/clients/suzuki.png" },
                                 { name: "Tanishq (Tata)", logo: "/clients/tanishq.png" },
+                                { name: "Godrej", logo: "/clients/godrej.png" },
                                 // Set 4 (Ensures seamless loop on wide screens)
                                 { name: "Eicher", logo: "/clients/eicher.png" },
                                 { name: "Maruti Suzuki", logo: "/clients/maruti.png" },
                                 { name: "JSW Steels", logo: "/clients/jsw.png" },
                                 { name: "Radisson Hotel", logo: "/clients/radisson.png" },
                                 { name: "Suzuki", logo: "/clients/suzuki.png" },
-                                { name: "Tanishq (Tata)", logo: "/clients/tanishq.png" }
+                                { name: "Tanishq (Tata)", logo: "/clients/tanishq.png" },
+                                { name: "Godrej", logo: "/clients/godrej.png" },
                             ].map((client, index) => (
                                 <div key={index} className="inline-flex flex-col items-center justify-center w-[280px] h-[160px] bg-white rounded-xl shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-slate-100 hover:border-accent/30 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300 group cursor-pointer hover:-translate-y-1">
                                     <div className="h-24 w-full px-8 flex items-center justify-center overflow-hidden">
@@ -177,6 +185,26 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+
+            {/* About Section */}
+            <div id="about" className="scroll-mt-24">
+                <About />
+            </div>
+
+            {/* Services Section */}
+            <div id="services" className="scroll-mt-24">
+                <Services />
+            </div>
+
+            {/* Projects Section */}
+            <div id="projects" className="scroll-mt-24">
+                <Projects />
+            </div>
+
+            {/* Contact Section */}
+            <div id="contact" className="scroll-mt-24">
+                <Contact />
+            </div>
         </div>
     );
 };
