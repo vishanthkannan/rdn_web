@@ -29,6 +29,33 @@ const Projects = () => {
                 "/projects/Maruthi Suzuki -Sankarapuram3.jpg"
             ]
         },
+            {
+            id: 3,
+            title: "Esaf Small Finance Bank",
+            category: "Bank",
+            location: "Thrissure-Kerala",
+            description: "An expansive automotive showroom combining luxury display areas with functional service bays.",
+            images: [
+                "/projects/esaf.jpg",
+                "/projects/esaf1.jpg",
+                "/projects/esaf2.jpg",
+                "/projects/esaf4.jpg",
+                "/projects/esaf5.jpg",
+                "/projects/esaf6.jpg",
+                "/projects/esaf7.jpg",
+                "/projects/esaf8.jpg",
+                "/projects/esaf9.jpg",
+                "/projects/esaf10.jpg",
+                "/projects/esaf11.jpg",
+                "/projects/esaf12.jpg",
+                "/projects/esaf13.jpg",
+                "/projects/esaf14.jpg",
+                "/projects/esaf16.jpg",
+                "/projects/esaf17.jpg",
+                "/projects/esaf18.jpg",
+                "/projects/esaf19.jpg",
+            ]
+        },
         {
             id: 3,
             title: "Suzuki",
@@ -46,7 +73,7 @@ const Projects = () => {
             id: 4,
             title: "Giri Appartment",
             category: "Living Area",
-            location: "Kerala",
+            location: "Bangalore-Karnataka",
             description: "Bespoke residential designs that blend comfort, elegance, and sustainable living.",
             images: [
                 "/projects/giri.jpg",
@@ -84,6 +111,55 @@ const Projects = () => {
                 "/projects/Esaf-furnitures7.jpg",
             ]
         },
+        {
+            id: 7,
+            title: "Maruthi - Ambur cars",
+            category: "Showroom & Service",
+            location: "Ambur-TamilNadu",
+            description: "Bespoke residential designs that blend comfort, elegance, and sustainable Working.",
+            images: [
+                "/projects/ambur.jpg",
+                "/projects/ambur1.jpg",
+                "/projects/ambur2.jpg",
+                "/projects/ambur3.jpg",
+                "/projects/ambur4.jpg",
+            ]
+        },
+                {
+            id: 7,
+            title: "Maruthi - MSSSP",
+            category: "Showroom & Service",
+            location: "Thellar(Tiruvannamalai)-TamilNadu",
+            description: "Bespoke residential designs that blend comfort, elegance, and sustainable Working.",
+            images: [
+                "/projects/msssp.jpg",
+                "/projects/msssp1.jpg",
+                "/projects/msssp3.jpg",
+            ]
+        },
+        {
+            id: 8,
+            title: "Maruthi S-OutLet",
+            category: "Showroom & Service",
+            location: "Pallikonda-TamilNadu",
+            description: "Bespoke residential designs that blend comfort, elegance, and sustainable Working.",
+            images: [
+                "/projects/vellor.jpg",
+                "/projects/vellor1.jpg",
+                "/projects/vellor2.jpg",
+            ]
+        },
+        {
+            id: 9,
+            title: "PMS",
+            category: "Showroom & Service",
+            location: "Mettur-TamilNadu",
+            description: "Bespoke residential designs that blend comfort, elegance, and sustainable Working.",
+            images: [
+                "/projects/pms.jpg",
+                "/projects/pms1.jpg",
+            ]
+        },
 
         {
             id: 7,
@@ -96,7 +172,8 @@ const Projects = () => {
                 "/projects/house1.jpg",
                 "/projects/house2.jpg",
                 "/projects/house3.jpg",
-                "/projects/house4.jpg"
+                "/projects/house4.jpg",
+                "/projects/house5.jpg",
             ]
         },
         {
