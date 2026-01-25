@@ -113,7 +113,7 @@ const Projects = () => {
         },
         {
             id: 7,
-            title: "Maruthi - Ambur cars",
+            title: "Maruti - Ambur cars",
             category: "Showroom & Service",
             location: "Ambur-TamilNadu",
             description: "Bespoke residential designs that blend comfort, elegance, and sustainable Working.",
@@ -127,7 +127,7 @@ const Projects = () => {
         },
                 {
             id: 7,
-            title: "Maruthi - MSSSP",
+            title: "Maruti - MSSSP",
             category: "Showroom & Service",
             location: "Thellar(Tiruvannamalai)-TamilNadu",
             description: "Bespoke residential designs that blend comfort, elegance, and sustainable Working.",
@@ -139,7 +139,7 @@ const Projects = () => {
         },
         {
             id: 8,
-            title: "Maruthi S-OutLet",
+            title: "Maruti S-OutLet",
             category: "Showroom & Service",
             location: "Pallikonda-TamilNadu",
             description: "Bespoke residential designs that blend comfort, elegance, and sustainable Working.",
