@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, ScrollRestoration } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -9,7 +9,7 @@ import ScrollToAnchor from './components/ScrollToAnchor';
 
 function App() {
   return (
-    <Router>
+    <>
       <ScrollToAnchor />
       <Routes>
         <Route path="/" element={<Layout />}>
@@ -20,7 +20,7 @@ function App() {
           <Route path="contact" element={<Contact />} />
         </Route>
       </Routes>
-    </Router>
+    </>
   );
 }
 
