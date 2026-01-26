@@ -71,13 +71,27 @@ const Projects = () => {
         },
         {
             id: 4,
-            title: "Giri Appartment",
+            title: "Appartment",
             category: "Living Area",
             location: "Bangalore-Karnataka",
 
             images: [
                 "/projects/giri.jpg",
                 "/projects/giri2.jpg",
+            ]
+        },
+                {
+            id: 4,
+            title: "Maruti Aarni",
+            category: "Showroom & Service",
+            location: "Aarni-Tamil Nadu",
+
+            images: [
+                "/projects/aarai.jpg",
+                "/projects/aarai1.jpg",
+                "/projects/aarai2.jpg",
+                "/projects/aarai3.jpg",
+                "/projects/aarai4.jpg",
             ]
         },
         {
@@ -172,8 +186,20 @@ const Projects = () => {
                 "/projects/house1.jpg",
                 "/projects/house2.jpg",
                 "/projects/house3.jpg",
+
+            ]
+        },
+                {
+            id: 7,
+            title: "Luxury Residential Collection",
+            category: "Premium Living",
+            location: "Various Locations",
+
+            layout: "cards",
+            images: [
                 "/projects/house4.jpg",
                 "/projects/house5.jpg",
+                "/projects/house6.jpg",
             ]
         },
         {
