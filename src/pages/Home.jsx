@@ -113,6 +113,8 @@ const Home = () => {
                                 { name: "Suzuki", logo: "/clients/suzuki.png" },
                                 { name: "Tanishq (Tata)", logo: "/clients/tanishq.png" },
                                 { name: "Godrej", logo: "/clients/godrej.png" },
+                                { name: "PMS", logo: "/clients/pms.png" },
+                                
                                 // Set 2    
                                 { name: "Eicher", logo: "/clients/eicher.png" },
                                 { name: "Maruti Suzuki", logo: "/clients/maruti.png" },
@@ -121,7 +123,8 @@ const Home = () => {
                                 { name: "Suzuki", logo: "/clients/suzuki.png" },
                                 { name: "Tanishq (Tata)", logo: "/clients/tanishq.png" },
                                 { name: "Godrej", logo: "/clients/godrej.png" },
-                                // Set 3
+                                { name: "PMS", logo: "/clients/pms.jpg" },
+                                // Set 300px
                                 { name: "Eicher", logo: "/clients/eicher.png" },
                                 { name: "Maruti Suzuki", logo: "/clients/maruti.png" },
                                 { name: "JSW Steels", logo: "/clients/jsw.png" },
@@ -129,6 +132,7 @@ const Home = () => {
                                 { name: "Suzuki", logo: "/clients/suzuki.png" },
                                 { name: "Tanishq (Tata)", logo: "/clients/tanishq.png" },
                                 { name: "Godrej", logo: "/clients/godrej.png" },
+                                { name: "PMS", logo: "/clients/pms.png" },
                                 // Set 4 (Ensures seamless loop on wide screens)
                                 { name: "Eicher", logo: "/clients/eicher.png" },
                                 { name: "Maruti Suzuki", logo: "/clients/maruti.png" },
@@ -137,6 +141,7 @@ const Home = () => {
                                 { name: "Suzuki", logo: "/clients/suzuki.png" },
                                 { name: "Tanishq (Tata)", logo: "/clients/tanishq.png" },
                                 { name: "Godrej", logo: "/clients/godrej.png" },
+                                { name: "PMS", logo: "/clients/pms.png" },
                             ].map((client, index) => (
                                 <div key={index} className="inline-flex flex-col items-center justify-center w-[280px] h-[160px] bg-white rounded-xl shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-slate-100 hover:border-accent/30 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300 group cursor-pointer hover:-translate-y-1">
                                     <div className="h-24 w-full px-8 flex items-center justify-center overflow-hidden">
