@@ -8,7 +8,7 @@ const Projects = () => {
             title: "Eicher Pro x",
             category: "Commercial",
             location: "Salem",
-            description: "A state-of-the-art commercial facility designed for efficiency and modern aesthetics.",
+
             images: [
                 "/projects/Eicher Pro x - Salem.jpg",
                 "/projects/Eicher Pro x - Salem3.jpg",
@@ -21,7 +21,7 @@ const Projects = () => {
             title: "Maruti Suzuki",
             category: "Showroom & Service",
             location: "Sankarapuram",
-            description: "An expansive automotive showroom combining luxury display areas with functional service bays.",
+
             images: [
                 "/projects/Maruthi Suzuki -Sankarapuram.jpg",
                 "/projects/Maruthi Suzuki -Sankarapuram1.jpg",
@@ -29,12 +29,12 @@ const Projects = () => {
                 "/projects/Maruthi Suzuki -Sankarapuram3.jpg"
             ]
         },
-            {
+        {
             id: 3,
             title: "Esaf Small Finance Bank",
             category: "Bank",
             location: "Thrissure-Kerala",
-            description: "An expansive automotive showroom combining luxury display areas with functional service bays.",
+
             images: [
                 "/projects/esaf.jpg",
                 "/projects/esaf1.jpg",
@@ -61,7 +61,7 @@ const Projects = () => {
             title: "Suzuki",
             category: "Automotive Center",
             location: "Ranipet",
-            description: "Modern automotive center featuring high-tech diagnostic areas and client lounges.",
+
             images: [
                 "/projects/Suzuki -Ranipet.jpg",
                 "/projects/Suzuki -Ranipet1.jpg",
@@ -74,7 +74,7 @@ const Projects = () => {
             title: "Giri Appartment",
             category: "Living Area",
             location: "Bangalore-Karnataka",
-            description: "Bespoke residential designs that blend comfort, elegance, and sustainable living.",
+
             images: [
                 "/projects/giri.jpg",
                 "/projects/giri2.jpg",
@@ -85,7 +85,7 @@ const Projects = () => {
             title: "Godrej",
             category: "Living Area",
             location: "Kerala",
-            description: "Bespoke residential designs that blend comfort, elegance, and sustainable living.",
+
             images: [
                 "/projects/godrej.jpg",
                 "/projects/godrej1.jpg",
@@ -99,7 +99,7 @@ const Projects = () => {
             title: "Esaf furnitures",
             category: "Furiture Works",
             location: "Kerala",
-            description: "Bespoke residential designs that blend comfort, elegance, and sustainable Working.",
+
             images: [
                 "/projects/Esaf-furnitures.jpg",
                 "/projects/Esaf-furnitures1.jpg",
@@ -116,7 +116,7 @@ const Projects = () => {
             title: "Maruti - Ambur cars",
             category: "Showroom & Service",
             location: "Ambur-TamilNadu",
-            description: "Bespoke residential designs that blend comfort, elegance, and sustainable Working.",
+
             images: [
                 "/projects/ambur.jpg",
                 "/projects/ambur1.jpg",
@@ -125,12 +125,12 @@ const Projects = () => {
                 "/projects/ambur4.jpg",
             ]
         },
-                {
+        {
             id: 7,
             title: "Maruti - MSSSP",
             category: "Showroom & Service",
             location: "Thellar(Tiruvannamalai)-TamilNadu",
-            description: "Bespoke residential designs that blend comfort, elegance, and sustainable Working.",
+
             images: [
                 "/projects/msssp.jpg",
                 "/projects/msssp1.jpg",
@@ -142,7 +142,7 @@ const Projects = () => {
             title: "Maruti S-OutLet",
             category: "Showroom & Service",
             location: "Pallikonda-TamilNadu",
-            description: "Bespoke residential designs that blend comfort, elegance, and sustainable Working.",
+
             images: [
                 "/projects/vellor.jpg",
                 "/projects/vellor1.jpg",
@@ -154,7 +154,7 @@ const Projects = () => {
             title: "PMS",
             category: "Showroom & Service",
             location: "Mettur-TamilNadu",
-            description: "Bespoke residential designs that blend comfort, elegance, and sustainable Working.",
+
             images: [
                 "/projects/pms.jpg",
                 "/projects/pms1.jpg",
@@ -166,7 +166,7 @@ const Projects = () => {
             title: "Luxury Residential Collection",
             category: "Premium Living",
             location: "Various Locations",
-            description: "Bespoke residential designs that blend comfort, elegance, and sustainable living.",
+
             layout: "cards",
             images: [
                 "/projects/house1.jpg",
@@ -181,7 +181,7 @@ const Projects = () => {
             title: "Modern Interior Concepts",
             category: "Interior Design",
             location: "Chennai & Coimbatore",
-            description: "Elegant and functional interior spaces designed to inspire and comfort.",
+
             layout: "masonry",
             images: [
                 "/projects/1.jpg",
@@ -234,7 +234,6 @@ const ProjectSection = ({ project, isLast }) => {
                         {project.category}
                     </span>
                     <h2 className="text-3xl md:text-5xl font-bold text-white mb-2 shadow-sm">{project.title}</h2>
-                    <p className="text-gray-300 max-w-md drop-shadow-md">{project.description}</p>
                 </div>
 
                 <div className="flex-1 flex flex-col md:flex-row h-full w-full">
@@ -254,11 +253,7 @@ const ProjectSection = ({ project, isLast }) => {
                             />
                             <div className={`absolute inset-0 bg-black/40 transition-opacity duration-300 ${activeCard === index ? 'opacity-0' : 'opacity-60 hover:opacity-40'}`} />
 
-                            <div className={`absolute bottom-8 left-8 transition-all duration-500 z-30 ${activeCard === index ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-                                <div className="bg-accent/90 backdrop-blur-md px-4 py-2 text-white font-bold rounded-sm flex items-center gap-2 shadow-lg">
-                                    View Detail <ArrowRight size={16} />
-                                </div>
-                            </div>
+
                         </div>
                     ))}
                 </div>
@@ -269,49 +264,66 @@ const ProjectSection = ({ project, isLast }) => {
     // 2. Modern Masonry/Grid Layout (For Interior)
     if (isMasonryLayout) {
         return (
-            <div className="relative min-h-screen w-full bg-white flex flex-col md:flex-row overflow-hidden">
-                {/* Left: Content */}
-                <div className="w-full md:w-1/3 p-12 flex flex-col justify-center bg-slate-50 z-10 shadow-xl relative order-2 md:order-1">
-                    <div className="animate-fade-in-up">
-                        <span className="inline-block px-3 py-1 bg-accent/10 text-accent text-xs font-bold uppercase tracking-wider rounded-full mb-4">
-                            {project.category}
-                        </span>
-                        <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
-                            {project.title}
-                        </h2>
-                        <div className="flex items-center text-slate-500 mb-8 font-medium">
-                            <MapPin className="w-5 h-5 mr-2 text-accent" />
-                            {project.location}
-                        </div>
-                        <p className="text-lg text-slate-600 leading-relaxed mb-8 border-l-4 border-accent pl-6">
-                            {project.description}
-                        </p>
-                        <button className="flex items-center gap-2 text-slate-900 font-bold hover:text-accent transition-colors group">
-                            Explore Gallery <ArrowRight className="group-hover:translate-x-1 transition-transform" />
-                        </button>
+
+            <div className="relative h-screen w-full bg-slate-900 overflow-hidden">
+                {/* Full Screen Bento Grid */}
+                <div className="absolute inset-0 p-2 md:p-4 grid grid-cols-4 grid-rows-2 gap-2 md:gap-4">
+                    {/* Image 1: Large Main Feature (Left) */}
+                    <div className="col-span-2 row-span-2 relative rounded-xl overflow-hidden group">
+                        <img
+                            src={project.images[0]}
+                            alt="Interior Main"
+                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60" />
+                    </div>
+
+                    {/* Image 2: Top Right */}
+                    <div className="col-span-1 row-span-1 relative rounded-xl overflow-hidden group">
+                        <img
+                            src={project.images[1]}
+                            alt="Interior Detail 1"
+                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        />
+                    </div>
+
+                    {/* Image 3: Top Far Right */}
+                    <div className="col-span-1 row-span-1 relative rounded-xl overflow-hidden group">
+                        <img
+                            src={project.images[2]}
+                            alt="Interior Detail 2"
+                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        />
+                    </div>
+
+                    {/* Image 4: Bottom Right Wide */}
+                    <div className="col-span-2 row-span-1 relative rounded-xl overflow-hidden group">
+                        <img
+                            src={project.images[3]}
+                            alt="Interior Detail 3"
+                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        />
                     </div>
                 </div>
 
-                {/* Right: Grid */}
-                <div className="w-full md:w-2/3 h-full bg-slate-100 overflow-y-auto order-1 md:order-2">
-                    <div className="grid grid-cols-2 gap-2 h-full">
-                        {project.images.map((img, index) => (
-                            <div
-                                key={index}
-                                className={`relative overflow-hidden group hover:z-10 transition-all duration-500 ${index === 0 || index === 3 ? 'col-span-2 row-span-2 h-[400px]' : 'col-span-1 h-[250px]'}`}
-                            >
-                                <img
-                                    src={img}
-                                    alt={`Interior ${index + 1}`}
-                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                                />
-                                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500" />
-                            </div>
-                        ))}
+                {/* Floating Content Card (Bottom Left over the Main Image) */}
+                <div className="absolute bottom-8 left-8 md:bottom-16 md:left-16 max-w-lg z-20 pointer-events-none">
+                    <div className="bg-white/10 backdrop-blur-xl border border-white/20 p-8 rounded-2xl shadow-2xl animate-fade-in-up">
+                        <span className="inline-block px-3 py-1 bg-accent text-white text-xs font-bold uppercase tracking-wider rounded-full mb-3 shadow-md">
+                            {project.category}
+                        </span>
+                        <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 leading-tight drop-shadow-lg">
+                            {project.title}
+                        </h2>
+                        <div className="flex items-center text-gray-200 font-medium text-lg">
+                            <MapPin className="w-5 h-5 mr-2 text-accent" />
+                            {project.location}
+                        </div>
                     </div>
                 </div>
             </div>
         );
+
     }
 
     // 3. Default Fullscreen Slideshow Layout (Commercial/Standard)
@@ -351,9 +363,7 @@ const ProjectSection = ({ project, isLast }) => {
                             {project.location}
                         </div>
 
-                        <p className="text-lg md:text-xl text-gray-300 max-w-2xl leading-relaxed mb-8">
-                            {project.description}
-                        </p>
+
 
                         {/* Progress Indicators */}
                         <div className="flex justify-start space-x-3">
