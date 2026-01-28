@@ -123,7 +123,7 @@ const Home = () => {
                                 { name: "Suzuki", logo: "/clients/suzuki.png" },
                                 { name: "Tanishq (Tata)", logo: "/clients/tanishq.png" },
                                 { name: "Godrej", logo: "/clients/godrej.png" },
-                                { name: "PMS", logo: "/clients/pms.jpg" },
+                                { name: "PMS", logo: "/clients/pms.png" },
                                 // Set 300px
                                 { name: "Eicher", logo: "/clients/eicher.png" },
                                 { name: "Maruti Suzuki", logo: "/clients/maruti.png" },
