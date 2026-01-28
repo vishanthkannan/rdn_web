@@ -103,68 +103,74 @@ const Home = () => {
                 <div className="relative w-full">
                     {/* Gradient Fade Edges removed for animated background compatibility */}
 
-                    <div className="flex w-full overflow-hidden pause-on-hover py-4">
-                        <div className="flex animate-scroll whitespace-nowrap gap-8 px-4">
-                            {[
-                                { name: "Eicher", logo: "/clients/eicher.png" },
-                                { name: "Maruti Suzuki", logo: "/clients/maruti.png" },
-                                { name: "JSW Steels", logo: "/clients/jsw.png" },
-                                { name: "Radisson Hotel", logo: "/clients/radisson.png" },
-                                { name: "Suzuki", logo: "/clients/suzuki.png" },
-                                { name: "Tanishq (Tata)", logo: "/clients/tanishq.png" },
-                                { name: "Godrej", logo: "/clients/godrej.png" },
-                                { name: "PMS", logo: "/clients/pms.png" },
-                                
-                                // Set 2    
-                                { name: "Eicher", logo: "/clients/eicher.png" },
-                                { name: "Maruti Suzuki", logo: "/clients/maruti.png" },
-                                { name: "JSW Steels", logo: "/clients/jsw.png" },
-                                { name: "Radisson Hotel", logo: "/clients/radisson.png" },
-                                { name: "Suzuki", logo: "/clients/suzuki.png" },
-                                { name: "Tanishq (Tata)", logo: "/clients/tanishq.png" },
-                                { name: "Godrej", logo: "/clients/godrej.png" },
-                                { name: "PMS", logo: "/clients/pms.png" },
-                                // Set 300px
-                                { name: "Eicher", logo: "/clients/eicher.png" },
-                                { name: "Maruti Suzuki", logo: "/clients/maruti.png" },
-                                { name: "JSW Steels", logo: "/clients/jsw.png" },
-                                { name: "Radisson Hotel", logo: "/clients/radisson.png" },
-                                { name: "Suzuki", logo: "/clients/suzuki.png" },
-                                { name: "Tanishq (Tata)", logo: "/clients/tanishq.png" },
-                                { name: "Godrej", logo: "/clients/godrej.png" },
-                                { name: "PMS", logo: "/clients/pms.png" },
-                                // Set 4 (Ensures seamless loop on wide screens)
-                                { name: "Eicher", logo: "/clients/eicher.png" },
-                                { name: "Maruti Suzuki", logo: "/clients/maruti.png" },
-                                { name: "JSW Steels", logo: "/clients/jsw.png" },
-                                { name: "Radisson Hotel", logo: "/clients/radisson.png" },
-                                { name: "Suzuki", logo: "/clients/suzuki.png" },
-                                { name: "Tanishq (Tata)", logo: "/clients/tanishq.png" },
-                                { name: "Godrej", logo: "/clients/godrej.png" },
-                                { name: "PMS", logo: "/clients/pms.png" },
-                            ].map((client, index) => (
-                                <div key={index} className="inline-flex flex-col items-center justify-center w-[280px] h-[160px] bg-white rounded-xl shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-slate-100 hover:border-accent/30 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300 group cursor-pointer hover:-translate-y-1">
-                                    <div className="h-24 w-full px-8 flex items-center justify-center overflow-hidden">
-                                        <img
-                                            src={client.logo}
-                                            alt={client.name}
-                                            className="max-h-full max-w-full object-contain transition-all duration-500 transform group-hover:scale-125"
-                                            onError={(e) => {
-                                                e.target.style.display = 'none';
-                                                e.target.nextSibling.classList.remove('hidden');
-                                            }}
-                                        />
-                                        <span className="hidden text-slate-400 font-bold text-xl text-center group-hover:text-primary transition-colors">{client.name}</span>
+                    <div className="relative w-full flex flex-col gap-12">
+                        {/* Row 1 */}
+                        <div className="flex w-full overflow-hidden pause-on-hover py-4">
+                            <div className="flex animate-scroll whitespace-nowrap gap-8 px-4">
+                                {[
+                                    // Row 1 Clients - Repeated 8 times
+                                    ...Array(8).fill([
+                                        { name: "Eicher", logo: "/clients/eicher.png" },
+                                        { name: "Maruti Suzuki", logo: "/clients/maruti.png" },
+                                        { name: "JSW Steels", logo: "/clients/jsw.png" },
+                                        { name: "Radisson Hotel", logo: "/clients/radisson.png" },
+                                    ]).flat()
+                                ].map((client, index) => (
+                                    <div key={`row1-${index}`} className="inline-flex flex-col items-center justify-center w-[280px] h-[160px] bg-white rounded-xl shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-slate-100 hover:border-accent/30 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300 group cursor-pointer hover:-translate-y-1">
+                                        <div className="h-24 w-full px-8 flex items-center justify-center overflow-hidden">
+                                            <img
+                                                src={client.logo}
+                                                alt={client.name}
+                                                className="max-h-full max-w-full object-contain transition-all duration-500 transform group-hover:scale-125"
+                                                onError={(e) => {
+                                                    e.target.style.display = 'none';
+                                                    e.target.nextSibling.classList.remove('hidden');
+                                                }}
+                                            />
+                                            <span className="hidden text-slate-400 font-bold text-xl text-center group-hover:text-primary transition-colors">{client.name}</span>
+                                        </div>
                                     </div>
-                                </div>
-                            ))}
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Row 2 */}
+                        <div className="flex w-full overflow-hidden pause-on-hover py-4">
+                            <div className="flex animate-scroll-reverse whitespace-nowrap gap-8 px-4">
+                                {[
+                                    // Row 2 Clients - Repeated 8 times
+                                    ...Array(8).fill([
+                                        { name: "Suzuki", logo: "/clients/suzuki.png" },
+                                        { name: "Tanishq (Tata)", logo: "/clients/tanishq.png" },
+                                        { name: "Godrej", logo: "/clients/godrej.png" },
+                                        { name: "PMS", logo: "/clients/pms.png" },
+                                    ]).flat()
+                                ].map((client, index) => (
+                                    <div key={`row2-${index}`} className="inline-flex flex-col items-center justify-center w-[280px] h-[160px] bg-white rounded-xl shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-slate-100 hover:border-accent/30 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300 group cursor-pointer hover:-translate-y-1">
+                                        <div className="h-24 w-full px-8 flex items-center justify-center overflow-hidden">
+                                            <img
+                                                src={client.logo}
+                                                alt={client.name}
+                                                className="max-h-full max-w-full object-contain transition-all duration-500 transform group-hover:scale-125"
+                                                onError={(e) => {
+                                                    e.target.style.display = 'none';
+                                                    e.target.nextSibling.classList.remove('hidden');
+                                                }}
+                                            />
+                                            <span className="hidden text-slate-400 font-bold text-xl text-center group-hover:text-primary transition-colors">{client.name}</span>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     </div>
+
+
                 </div>
-            </section>
+            </section >
 
             {/* Why Choose Us */}
-            <section className="py-24 bg-white">
+            < section className="py-24 bg-white" >
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
                         <h2 className="text-4xl font-bold text-primary mb-4">Why Choose RDN Creators</h2>
@@ -189,28 +195,28 @@ const Home = () => {
                         ))}
                     </div>
                 </div>
-            </section>
+            </section >
 
             {/* About Section */}
-            <div id="about" className="scroll-mt-24">
+            < div id="about" className="scroll-mt-24" >
                 <About />
-            </div>
+            </div >
 
             {/* Services Section */}
-            <div id="services" className="scroll-mt-24">
+            < div id="services" className="scroll-mt-24" >
                 <Services />
-            </div>
+            </div >
 
             {/* Projects Section */}
-            <div id="projects" className="scroll-mt-24">
+            < div id="projects" className="scroll-mt-24" >
                 <Projects />
-            </div>
+            </div >
 
             {/* Contact Section */}
-            <div id="contact" className="scroll-mt-24">
+            < div id="contact" className="scroll-mt-24" >
                 <Contact />
-            </div>
-        </div>
+            </div >
+        </div >
     );
 };
 
